@@ -1,4 +1,4 @@
-/* Estilo del título */
+/* Título */
 #title {
 	color: #3498db;
 	font-size: 28px;
@@ -7,7 +7,7 @@
 	margin-bottom: 20px;
   }
   
-  /* Estilo del contenedor principal */
+  /* Contenedor principal */
   .center {
 	display: flex;
 	flex-direction: column;
