@@ -1,12 +1,33 @@
 <!DOCTYPE html> 
 <html>
 	<head>
-        <script src="../library/jquery.min.js"></script>
-        <script src="../js/game.js" type="module"></script>
-		<title> Memory - Pantalla </title>
+		<script src="../library/jquery.min.js"></script>
+		<script src="../js/memory.js" type="module"></script>
+		<script src="../js/game.js" type="module"></script>
+		<title>Memory - Pantalla</title>
 	</head>
 	<body>
 		<h1>Partida</h1>
-        <div id="game"></div>
+		<div id="game"></div>
+
+		<script>
+			// Espera a que el documento esté listo antes de ejecutar el código jQuery
+			$(document).ready(function() {
+				var game = $('#game');
+
+				gController.init(updateSRC).forEach(function(card, indx){
+					game.append('<img id="c'+indx+'" class="card" title="card">');
+					card.pointer = $('#c'+indx);
+					card.pointer.on('click', () => gController.click(card));
+					card.pointer.attr("src", card.current);
+				});
+
+				function updateSRC(){
+					this.pointer.attr("src", this.current);
+				}
+			});
+		</script>
 	</body>
 </html>
+
+

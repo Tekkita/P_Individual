@@ -1,4 +1,8 @@
-/* Título */
+/* Estilo del título */
+*{
+	box-sizing: border-box;
+}
+
 #title {
 	color: #3498db;
 	font-size: 28px;
@@ -7,7 +11,15 @@
 	margin-bottom: 20px;
   }
   
-  /* Contenedor principal */
+  body{
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+  /* Estilo del contenedor principal */
   .center {
 	display: flex;
 	flex-direction: column;
@@ -30,13 +42,6 @@
 	font-size: 18px;
 	box-shadow: 0 4px 8px rgba(46, 204, 113, 0.2);
   }
-  
-  button.center:hover {
-	background-color: #27ae60;
-  }
-  
-  
-  
   
   
   
