@@ -27,8 +27,6 @@ export var game = function(){
         }
     };
 
-    //condiciones de puntos y tiempo para dificultad
-
     switch (difficulty){
         case 'easy':
             lost_points=10;
