@@ -1,11 +1,11 @@
-import { game as gController } from "./memory.js";
+import { game as gContrller } from "./memory.js";
 
 var game = $('#game');
 
-gController.init(updateSRC).forEach(function(card, indx){
+gContrller.init(updateSRC).forEach(function(card, indx){
     game.append('<img id="c'+indx+'" class="card" title="card">');
     card.pointer = $('#c'+indx);
-    card.pointer.on('click', () => gController.click(card));
+    card.pointer.on('click', () => gContrller.click(card));
     card.pointer.attr("src", card.current);
 });
 

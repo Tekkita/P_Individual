@@ -3,19 +3,32 @@
 	<head>
         <script src="../library/jquery.min.js"></script>
         <script src="../js/options.js" type="module"></script>
+        <link rel="stylesheet" href="../styles/menu.css">
 		<title> Memory - Opcions </title>
 	</head>
 	<body>
-		<h1>Opcions</h1>
-        <label for="pairs">Número de cartes</label>
-        <input type="number" id="pairs" value="2" min="2" max="6">
-        <label for="dif">Dificultat</label>
-        <select id="dif">
-            <option value="easy">Baixa</option>
-            <option value="normal" selected>Normal</option>
-            <option value="hard">Alta</option>
-        </select>
-        <button id="default">Per defecte</button>
-        <button id="apply">Aplicar</button>
+        <div class="app">
+            <h1>Opcions</h1>
+            <div class="options">
+                <div id="inputs">
+                    <div id="n_cartes">
+                        <label for="pairs">NUMERO DE PARELLES</label>
+                        <input type="number" id="pairs" value="2" min="2" max="6">
+                    </div>
+                    <div id="dificultat">
+                        <label for="dif">DIFICULTAT</label>
+                    <select id="dif">
+                        <option value="easy">BAIXA</option>
+                        <option value="normal" selected>NORMAL</option>
+                        <option value="hard">ALTA</option> 
+                    </select>
+                    </div>   
+                    <button id="default"><b>PER DEFECTE</b></button>
+                </div>
+                <div id="save_settings">
+                    <button id="apply"><b>APLICAR</b></button>
+                </div>    
+            </div>
+        </div>		
 	</body>
 </html>
