@@ -16,7 +16,7 @@ $_SESSION['points'] = $_POST['points'];
 $_SESSION['cards'] = $_POST['cards'];
 
 // Crear una conexión a la base de datos
-$conn = oci_connect('usuario', 'contraseña', 'nombre_de_la_base_de_datos');
+$conn = oci_connect('u1979273', 'Culato2512345#', 'bdd.sql');
 if (!$conn) {
     $error = oci_error();
     echo json_encode("Error al conectar con la base de datos: " . $error['message']);
