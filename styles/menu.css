@@ -1,148 +1,16 @@
-* {
-    box-sizing: border-box;
+#title, .center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-@font-face {
-    font-family: 'Derive';
-    src: url('Derive-BF65ea8bbbcb698.ttf');
+button.center{
+	width: 6rem;
+	height: 3rem;
+	margin-top: 1rem;
 }
 
-:root {
-    --white: #f5f5f5;
-    --light-blue: #82c4e0;
-    --dark-blue: #37517a;
-    --peach: #f2b599;
+#title{
+	color:red;
+	text-align: center;
 }
-
-body {
-    height: 100vh;
-    width: 100vw;
-    padding: 20px;
-    margin: 0px;
-    overflow: auto;
-    font-family: 'Derive';
-    background-color: var(--light-blue);
-}
-
-.app {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-    position: relative;
-}
-
-button {
-    font-family: 'Derive';
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    color: var(--white);
-    background-color: var(--dark-blue);
-    border: none;
-    font-size: 30px;
-    box-shadow: 0 5px var(--dark-blue);
-}
-
-button:hover {
-    background-color: var(--peach);
-}
-
-button:active {
-    background-color: var(--peach);
-    color: var(--dark-blue);
-    box-shadow: 0 0px #666;
-    transform: translateY(2px);
-}
-
-h1 {
-    font-family: 'Derive';
-    font-size: 40px;
-    margin: 0;
-    color: var(--dark-blue);
-}
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    position: relative;
-}
-
-#settings,
-#settings_button,
-#saves_button {
-    font-size: 25px;
-}
-
-#play_button {
-    font-size: 40px;
-    padding: 10px;
-}
-
-#game {
-    height: 70vh;
-    width: 90vw;
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.card {
-    height: calc(25vh - 20px); /* Ajustado el tamaño */
-    width: calc(15vw - 20px); /* Ajustado el tamaño con espacio entre ellas */
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/*SETTINGS STYLING*/
-
-.options {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-}
-
-#inputs {
-    font-size: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 30%;
-}
-
-#n_cartes,
-#dificultat {
-    display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#default {
-    font-size: 18px;
-    width: 60%;
-}
-
-input[type="number"],
-#dif {
-    width: 40%;
-}
-
-#save_settings {
-    align-self: center;
-    justify-self: center;
-} 
