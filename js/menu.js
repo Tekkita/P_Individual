@@ -1,20 +1,32 @@
 addEventListener('load', function() {
-    document.getElementById('play_button').addEventListener('click', 
+    document.getElementById('play').addEventListener('click', 
     function(){
-        window.location.assign("./html/game.html");
+        sessionStorage.removeItem("save");
+        window.location.assign("./html/canvasgame.html");
     });
 
-    document.getElementById('settings_button').addEventListener('click', 
+    document.getElementById('saves').addEventListener('click', 
+    function(){
+        fetch("./php/load.php",{
+            method: "POST",
+            body: "",
+            headers: {"content-type":"application/json; charset=UTF-8"}
+        })
+        .then(response=>{
+            if (response.ok) response.text();
+            else trow("PHP connection fail");
+        })
+        .then(partida=>sessionStorage.save = partida)
+        .catch(err=>sessionStorage.save = localStorage.save)
+        .finally(()=>window.location.assign("./html/canvasgame.html"));
+    });
+
+    document.getElementById('options').addEventListener('click', 
     function(){
         window.location.assign("./html/options.html");
     });
 
-    document.getElementById('saves_button').addEventListener('click', 
-    function(){
-        console.error("Opció no implementada");
-    });
-
-    document.getElementById('exit_button').addEventListener('click', 
+    document.getElementById('exit').addEventListener('click', 
     function(){
         console.warn("No es pot sortir!");
     });
